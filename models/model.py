@@ -89,7 +89,8 @@ class SRGN(nn.Module):
         xwv = xl3.view(xwv.size(0), -1)
         xw3 = self.classifier3(xwv)
 
-        nwc = self.cam(xlw)
+        nwc = self.cam(xlw).view(xlw.size(0), xlw.size(1), -1)
+        nwc = F.softmax(nwc, dim=2)..view(xlw.size(0), xlw.size(1), xlw.size(2), xlw.size(3))
         xlf = torch.mul(xlw, nwc).view(xlw.size(0), xlw.size(1), xlw.size(2), xlw.size(3))
         xlf = self.max3(xlf)
         xlf = xhv.view(xl3.size(0), -1)
