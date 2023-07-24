@@ -17,6 +17,3 @@ Download the CUB-200-2011 datasets and put it in the root directory named bird, 
 
 ## Train
 Train from scratch with train.py.
-
-## Results
-![image](images/results.png)
