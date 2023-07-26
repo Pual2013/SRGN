@@ -1,7 +1,5 @@
 # SRGN
 
-## Framework
-![image](images/SRGN.png)
 
 ## Requirement
 python 3.6
